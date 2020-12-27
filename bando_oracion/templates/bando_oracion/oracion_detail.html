@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card">
+    <div class="card-header">
+        {{oracion.nombre}}
+        <h6 class="mb-2 small text-muted">Momento de la oración: {{oracion.fecha_hora}}</h6>
+    </div>
+    <div class="card-body">
+        <p class="card-text">{{oracion.motivo|linebreaks}}</p>
+        <a href="{{oracion.get_absolute_url_udpate}}" class="btn btn-primary card-link float-right">Editar</a>
+    </div>
+</div>
+
+
+{% endblock %}

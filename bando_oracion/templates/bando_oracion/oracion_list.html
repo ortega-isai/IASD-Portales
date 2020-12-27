@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron shadow">
+    <div class="container">
+        <h1 class="display-4">Bando de Oración</h1>
+        <p class="lead">Los creyentes que se vistan con toda la armadura de Dios y que dediquen tiempo diariamente a la
+            meditación, la oración y el estudio de las Escrituras, se conectarán con el cielo y ejercerán una influencia
+            salvadora y transformadora sobre los que los rodean.</p>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <table id="dataTable" class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Fecha y Hora</th>
+                    <th scope="col">Hermano</th>
+                    <th scope="col">Va orar por</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for oracion in oracion_list %}
+                <tr>
+                    <td class="small">
+                        <a href="{{oracion.get_absolute_url}}">{{oracion.fecha_hora}}</a>
+                    </td>
+                    <td>{{oracion.nombre}}</td>
+                    <td>{{oracion.motivo|linebreaks}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+
+        </table>
+    </div>
+</div>
+
+
+{% endblock %}
