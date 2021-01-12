@@ -34,3 +34,7 @@ class OracionUpdate(SuccessMessageMixin, UpdateView):
     model = Oracion
     form_class = forms.OracionUpdateForm
     success_message = "Fue actualizado exitosamente"
+
+
+class AboutTemplateView(TemplateView):
+    template_name = 'bando_oracion/about.html'

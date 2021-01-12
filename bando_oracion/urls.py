@@ -8,5 +8,5 @@ urlpatterns = [
     path('<int:pk>', views.OracionDetailView.as_view(), name='oracion_detail'),
     path('<int:pk>/', views.OracionUpdate.as_view(), name='oracion_update'),
     path('add/', views.OracionCreate.as_view(), name='oracion_add'),
-
+    path('About/', views.AboutTemplateView.as_view(), name='about')
 ]
