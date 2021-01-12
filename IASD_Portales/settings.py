@@ -27,7 +27,7 @@ SECRET_KEY = 'g05uaezzq@$(oor#+yl(%zt@7i@)h(ubdo%(t0ife@vfpcwenr'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['f617a60c488e.ngrok.io', '127.0.0.1']
+ALLOWED_HOSTS = ['pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bando_oracion.apps.BandoOracionConfig',
     'crispy_forms',
-    'bootstrap_datepicker_plus',
 ]
 
 MIDDLEWARE = [
